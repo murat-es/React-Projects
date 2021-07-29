@@ -13,7 +13,7 @@ function MovieList(props) {
                 <div id="movieItem" className="col-lg-4" key={i}>
                     <div className="card m-3 shadow-sm">
                         <img src={movie.picture}
-                            className="card-img-top" alt="image of movie" />
+                            className="card-img-top" alt=" movie" />
                         <div className="card-body">
                             <h4 className="card-title">{movie.name}</h4>
                             <p className="card-text">{movie.desc}</p>
