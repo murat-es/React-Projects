@@ -6,7 +6,6 @@ function AddMovie(props) {
     const formSubmit = (e)=> {
         e.preventDefault();
         const newMovie = serialize(e.target, { hash: true });
-        console.log(newMovie);
         props.addMovieProp(newMovie);
     }
 

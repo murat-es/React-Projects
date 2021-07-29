@@ -110,7 +110,6 @@ function App() {
     )
     setMovie(filGen);
   }
-  console.log(window.location.pathname);
 
   //filter by rating
   const filterRating = (e) => {
@@ -128,12 +127,11 @@ function App() {
 
   //add movie
   const addMovieToList = (e) => {
-    console.log(e);
     setMovie([...movLi, e]);
-    console.log(movLi);
   }
 
-
+  const [changeButton, setChangeButton] = useState(window.location.pathname);
+  const [buttonContent, setButtonContent] = useState("Add a movie");
 
   return (
     <Router>
@@ -146,11 +144,18 @@ function App() {
             </div>
             <div className="col-2">
 
-              {window.location.pathname ?  <Link to="/addmovie" className="btn btn-lg btn-primary w-100 mt-1" style={{ color: "white" }}>
-                Add Movie
-              </Link> : <Link to="/"  className="btn btn-lg btn-primary w-100 mt-1" style={{ color: "white" }}>
-                Home
-              </Link> }
+              {changeButton === "/" ?
+                <Link to="/addmovie" onClick={() =>
+                  setChangeButton("/addmovie") - setButtonContent("Home")}
+                  className="btn btn-lg btn-primary w-100 mt-1" style={{ color: "white" }}>
+                  {buttonContent}
+                </Link> :
+                <Link to="/" onClick={() => setChangeButton("/") - setButtonContent("Add a movie")}
+                  className="btn btn-lg btn-primary w-100 mt-1" style={{ color: "white" }}>
+                  {buttonContent}
+                </Link>}
+
+
 
 
             </div>
