@@ -1,0 +1,28 @@
+.productList{
+    display: inline-block;
+    margin: 0px 30px;
+}
+.container{
+    padding: 35px;
+    background-color: bisque;
+    margin: 25px;
+}
+.buttonMoney{
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 12px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+.buttonMoney:hover{
+    background-color: #6bd16f;
+}
+.red{
+    background-color: #f44336;
+}
+.red:hover{
+    background-color: #ff574b;
+}

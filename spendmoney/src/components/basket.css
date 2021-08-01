@@ -1,0 +1,29 @@
+.basket{
+    width: 50%;
+    margin: auto;
+    background-color: aqua;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+.right{
+    float:right;
+    margin-right:50px;
+}
+.left{
+    text-align: left;
+    margin-left: 50px;
+    padding-top: 20px;
+}
+.reset{
+    background-color: #fff; 
+    border: none;
+    color: black;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+}
+.reset:hover{
+    background-color: rgb(255, 196, 0); 
+}

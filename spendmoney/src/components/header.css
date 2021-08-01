@@ -1,0 +1,11 @@
+.header{
+    background-color: aqua;
+    font-size: 2em;
+    padding: 15px 0px;
+    position: sticky;
+    top: 0;
+    text-align: center;
+}
+body{
+    margin: 0px;
+}
