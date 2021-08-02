@@ -1,6 +1,6 @@
 import React from 'react'
 import './product.css'
-import {moneyFormat} from '../utils.js'
+import { moneyFormat } from '../utils.js'
 
 
 function Product({ product, basket, setBasket, money }) {
@@ -17,7 +17,7 @@ function Product({ product, basket, setBasket, money }) {
         }
         else {
             setBasket([...basket, {
-                id: product.id, name: product.name,price:product.price, amount: 1
+                id: product.id, name: product.name, price: product.price, amount: 1
             }]);
         }
 
@@ -37,21 +37,24 @@ function Product({ product, basket, setBasket, money }) {
         }
 
 
+
     }
+
+
     return (
         <div className="productList">
-            
+
             <div className="container">
-            <img src={product.image} alt="" width="200px" height="200px"/>
-            <h3>{product.name}</h3>
-            <p>${moneyFormat(product.price)}</p>
-            <button className="buttonMoney red" 
-                disabled={!basketItem} onClick={removeFromBasket}>sell</button>
-            <span> &nbsp; {(basketItem && basketItem.amount) || 0}  &nbsp;</span>
-            <button disabled={product.price>money} className="buttonMoney" onClick={addToBasket}>buy</button>
-           
+                <img src={product.image} alt="" width="200px" height="200px" />
+                <h3>{product.name}</h3>
+                <p>${moneyFormat(product.price)}</p>
+                <button className="buttonMoney red" id="sellB"
+                    disabled={!basketItem} onClick={removeFromBasket}>sell</button>
+                <span> &nbsp; {(basketItem && basketItem.amount) || 0}  &nbsp;</span>
+                <button disabled={product.price > money} className="buttonMoney" onClick={addToBasket}>buy</button>
+
             </div>
-           
+
 
         </div>
     )
