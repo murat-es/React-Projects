@@ -1,9 +1,12 @@
+.head{
+    position: sticky;
+    top: 0;
+}
 .header1{
     background-color: aqua;
     font-size: 2em;
     padding: 15px 0px;
-    position: sticky;
-    top: 0;
+    align-self: flex-start;
     text-align: center;
 }
 body{
@@ -13,7 +16,7 @@ body{
     background-color: rgb(255, 36, 36);
     font-size: 2em;
     padding: 15px 0px;
-    position: sticky;
-    top: 0;
+    align-self: flex-start;
     text-align: center;
+
 }
