@@ -50,7 +50,7 @@ function Product({ product, basket, setBasket, money }) {
                 <p>${moneyFormat(product.price)}</p>
                 <button className="buttonMoney red" id="sellB"
                     disabled={!basketItem} onClick={removeFromBasket}>sell</button>
-                <span> &nbsp; {(basketItem && basketItem.amount) || 0}  &nbsp;</span>
+                <span style={{pointerEvents: "none"}}> &nbsp; {(basketItem && basketItem.amount) || 0}  &nbsp;</span>
                 <button disabled={product.price > money} className="buttonMoney" onClick={addToBasket}>buy</button>
 
             </div>
